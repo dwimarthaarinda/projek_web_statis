@@ -1,42 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Basic Skincare</title>
-<meta charset="UFT-8">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Verdana",}
-.w3-bar-block .w3-bar-item {padding: 20px}
-</style>
-</head>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+     <title> Sticky Navigation Bar | CodingLab </title> 
+    <link rel="stylesheet" href="style.css">
+   </head>
 <body>
-
-<!-- Top menu -->
- <div class="w3-top">
-    <div class="w3-white w3-xlarge" style="max-width:1200px;margin: auto;">
-        <Skincare class="w3-center w3-padding-16">Basic Skincare</div>
+  <nav>
+    <div class="nav-content">
+      <div class="logo">
+        <a href="#">WebSkin.</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="halaman.html">About</a></li>
+      </ul>
     </div>
- </div>
-
- <!-- !PAGE CONTENT -->
-  <div class="w3-main w3-w3-content w3-padding" style="max-width: 1200px;margin-top: 100px">
-    
-    <!-- First Photo Grid-->
-    <div class="w3-row-padding w3-padding-16 w3-center" id="skincare">
-        <div class="w3-quarter">
-            <img src="skincare.webp" alt="Skincare" style="width: 100%">
-            <h3>BASIC SKINCARE</h3>
-            <p>Basic skincare adalah rangkaian perawatan paling dasar 
-            untuk memelihara kulit wajah agar tetap bersih dan sehat.</p>
-        </div>
-    </div>
+  </nav>
+  <section class="home"></section>
+  <div class="text">
+    <p><h2 align = "center">Pengertian Basic Skincare</h2>
+    <p><h3 align = "center">Basic skincare adalah rangkaian perawatan wajah paling dasar</p></h3>
+    <br><p><h3 align = "center">Untuk memelihara kulit wajah agar tetap bersih dan sehat,</p></h3>
+    <br><p><h3 align = "center">Tentunya dengan menggunakan SKINCARE yang sudah BPOM (tidak mengandung bahan bahan kimia berbahaya).</p></h3>
   </div>
-  <hr id="About">
 
-  <!-- About Section -->
-   <div class="w3-container w3-padding-32 w3-center">
-    <h3>Dan Lain-lainnya</h3><br>
-    <p>DWI MARTHA ARINDA</p>
-    <button>home</button>
-   </div>
+  <script>
+  let nav = document.querySelector("nav");
+    window.onscroll = function() {
+      if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+      }else {
+        nav.classList.remove("sticky");
+      }
+    }
+  </script>
+
 </body>
 </html>
